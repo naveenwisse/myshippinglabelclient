@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #00d0ff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a04db7+0,7db9e8+100&1+0,0+100 */
+  background: -moz-linear-gradient(45deg, #9100ff 0%, #00d0ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #9100ff 0%, #00d0ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #9100ff 0%, #00d0ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a04db7', endColorstr='#007db9e8', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  // position: absolute;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body img {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  width: calc(100% - 25px);
+  max-width: 600px;
+  height: auto;
+  opacity: 0.5;
+}
+
+select {
+  display: block !important;
+}
+
+.side-nav li>a>i,
+.side-nav li>a>[class^="mdi-"],
+.side-nav li>a li>a>[class*="mdi-"],
+.side-nav li>a>i.material-icons {
+  margin: 0 11px 0 0 !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.modal.modal-fixed-footer .modal-content {
+  height: 100% !important;
+}
+
+.modal {
+  border-radius: 15px !important;
+  max-height: 80% !important;
+}
+
+.modal.modal-fixed-footer {
+  height: 60% !important;
+  width: 40% !important;
+}
+
+.modal .modal-footer {
+  height: 80px !important;
+}
+
+.modal-footer {
+  border-top: none !important;
+  display: none !important;
+}
+
+.tabs .tab a {
+  color: rgb(32, 73, 255) !important;
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.tabs .indicator {
+  background: -webkit-linear-gradient(45deg, rgb(32, 73, 255), #00d0ff) !important;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+
+  color: rgb(32, 73, 255) !important;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 0 !important;
+
+}
+
+.card {
+  border-radius: 15px !important;
+  margin: .5rem 0 1.5rem 0 !important;
+}
+
+.btn {
+  background: -webkit-linear-gradient(45deg, rgb(32, 73, 255), #00d0ff) !important;
+}
+
+.spinner-green,
+.spinner-green-only {
+  border-color: #7991be !important;
+}
+
+.tabs {
+  background-color: transparent !important;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+  height: 2.5rem !important;
+}
+
+a:hover {
+  background: transparent !important;
+}

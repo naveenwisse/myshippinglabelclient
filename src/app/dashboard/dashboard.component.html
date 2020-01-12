@@ -1,0 +1,292 @@
+<div #goBackElement *ngIf="goBackBool" (click)="goBack()" class="go-back">
+  GO BACK
+</div>
+
+<img src="../../assets/car.png" alt="">
+<div class="container">
+  <div *ngIf="!confirm" class="row">
+    <div class="col s12 l6 ">
+      <!-- <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12 center">
+              <h5 class="grey-text">Choose your carrier</h5>
+            </div>
+          </div>
+          <div class="row flex margin-zer">
+            <div #carrier (click)="carrierChoosed(i.carrId, in)" *ngFor="let i of carriers; let in = index"
+              class="col carrier center">
+              {{i.name}}
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div *ngIf="savedAddresses" class="card center">
+        <div class="card-content">
+          <div class="row">
+            <h5 class="align-center grey-text">Your saved addresses</h5>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let a of savedAddresses; let in = index">
+                    <td>{{in + 1}}</td>
+                    <td>{{a.fullname}}</td>
+                    <td>{{a.address}}</td>
+                    <td (click)="chooseAddress(a)">Choose Remove</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div #getHeight class="card center">
+        <div class="card-content">
+          <form action="" [formGroup]="formFrom">
+            <div class="row">
+              <h5 class="align-center grey-text">Ship from</h5>
+            </div>
+            <div class="row">
+              <div class="col input-field m12 s12">
+                <label #label for="">Name</label>
+                <input placeholder="" type="text" name="nameFrom" formControlName="nameFrom">
+              </div>
+              <div class="col input-field m12 s12">
+                <label #label for="">Phone</label>
+                <input placeholder="" type="text" name="phoneFrom" formControlName="phoneFrom">
+              </div>
+              <div class="col input-field m12 s12">
+                <label #label for="">Company name</label>
+                <input placeholder="" type="text" name="compFrom" formControlName="compFrom">
+              </div>
+            </div>
+            <div *ngIf="email" class="row">
+              <div class="col input-field m12 s12">
+                <label #label for="">Email</label>
+                <input placeholder="" type="text" name="email" formControlName="email">
+              </div>
+              <div class="col input-field m12 s12">
+                <label #label for="">Confirm email</label>
+                <input placeholder="" type="text" name="repEmail" formControlName="repEmail">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col input-field m6 s6">
+                <label #label for="">Adress</label>
+                <input placeholder="" type="text" name="addFrom" formControlName="addFrom">
+              </div>
+              <div class="col input-field m6 s6">
+                <label #label for="">State province</label>
+                <input placeholder="" type="text" name="stateFrom" formControlName="stateFrom">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col input-field m6 s6">
+                <label #label for="">Postal code</label>
+                <input placeholder="" type="text" name="postFrom" formControlName="postalFrom">
+              </div>
+
+              <div class="col input-field m6 s6">
+                <label #label for="">City</label>
+                <input placeholder="" type="text" name="citiFrom" formControlName="citiFrom">
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col s12 l6">
+      <div #setHeight class="card center">
+        <div class="card-content">
+          <form action="" [formGroup]="form">
+            <div class="row">
+              <h5 class="grey-text">Ship to</h5>
+            </div>
+            <div class="row">
+              <div class="col input-field m12 s12">
+                <label #label for="">Name</label>
+                <input placeholder="" type="text" name="nameTo" formControlName="nameTo">
+              </div>
+              <div class="col input-field m12 s12">
+                <label #label for="">Phone</label>
+                <input placeholder="" type="text" name="phoneTo" formControlName="phoneTo">
+              </div>
+              <div class="col input-field m12 s12">
+                <label #label for="">Company name</label>
+                <input placeholder="" type="text" name="compTo" formControlName="compTo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col input-field m6 s6">
+                <label #label for="">Adress</label>
+                <input placeholder="" type="text" name="addTo" formControlName="addTo">
+              </div>
+              <div class="col input-field m6 s6">
+                <label #label for="">State province</label>
+                <input placeholder="" type="text" name="stateTo" formControlName="stateTo">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col input-field m6 s6">
+                <label #label for="">Postal code</label>
+                <input placeholder="" type="text" name="postalTo" formControlName="postalTo">
+              </div>
+
+              <div class="col input-field m6 s6">
+                <label #label for="">City</label>
+                <input placeholder="" type="text" name="citiTo" formControlName="citiTo">
+              </div>
+            </div>
+            <!-- <label for="" class="margin">Units</label>
+
+            <div class="row">
+              <div class="col input-field s6">
+                <label for="">Weight</label>
+                <input placeholder="" type="text" name="weight" formControlName="weight">
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col s6">
+                <mz-checkbox-container>
+                  <input mz-checkbox [label]="'Package contains alcohol'" id="alcohol" type="checkbox"
+                    formControlName="alcohol">
+                </mz-checkbox-container>
+              </div>
+              <div class="col s6">
+                <mz-checkbox-container>
+                  <input mz-checkbox [label]="'Adult Signature at receipt'" id="signature" type="checkbox"
+                    formControlName="signature">
+                </mz-checkbox-container>
+              </div>
+            </div>
+
+            <a (click)="getRates()" class="waves-effect blue darken-1 btn mbt">SHIP NOW!</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="confirm" class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content center">
+          <div class="row margin-top-btn">
+            <span *ngIf="!label" class="title center">Pay for your shipping</span>
+            <span *ngIf="label" class="title center">Download your label !</span>
+            <div class="row center">
+              <div class="col s12 center">Your carrier <span class="bold">{{confirmObj.service_type}}</span></div>
+              <div class="col s12 center">Your price <span class="bold"> {{actualPrice}} $</span>
+              </div>
+            </div>
+            <div class="row center">
+              <div *ngIf="label" class="col s12 m12 offset-m2 center margin-top-btn">
+                <a (click)="clearStorage()" class="waves-effect blue darken-1 btn" href="{{label.label_download.href}}">DOWNLOAD YOUR LABEL !
+                      </a>
+              </div>
+              <div *ngIf="!label" class="col s12 m8 offset-m2 center">
+                <div class="row center-align">
+                  <div class="col s12 boxpay">
+                    <div *ngIf="loadPayPal" class="loader">
+                      <app-loader></app-loader>
+                    </div>
+                    <h5 class="title-pay">
+                      Pay via <span>PayPal</span>
+                    </h5>
+                    <div id="paypal-button-container"></div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col s12 boxpay">
+                    <div *ngIf="loadStripe" class="loader">
+                      <app-loader></app-loader>
+                    </div>
+                    <h5 class="title-pay">
+                      Pay via <span>Credit Card</span>
+                    </h5>
+                    <form action="/charge" method="post" id="payment-form">
+                      <div class="form-row">
+                        <label for="card-element">
+                          Credit or debit card
+                        </label>
+                        <div id="card-element">
+                          <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                      </div>
+                      <button (click)="stripeSubmit()" class="waves-effect blue darken-1 btn stripebtn">Submit Stripe
+                        Payment</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!options" class="row">
+      <div [@races]='carriersMargins?.length'>
+        <div class="col s12" *ngFor="let i of carriersRatesList; let in = index">
+          <div class="card">
+            <div class="card-content valign-wrapper">
+              <div class="col s4 imgcarrier">
+                <img src="{{i.img}}" alt="">
+                <!-- <span class="card-title bold">{{i.carrier_name === 'Stamps.com' ? 'USPS' : i.carrier_name}}</span> -->
+              </div>
+              <div class="col m5 offset-m5 offset-s2 s7">Price
+                range<span class="bold"><h5>{{i.prices_string}}</h5></span> </div>
+              <div class="col s1"><i #arrow (click)="open(in)" class="material-icons right font-size">expand_more</i>
+              </div>
+            </div>
+            <div #cards class="card-content show">
+              <div class="row">
+                <div class="col s12">
+                  <table class="striped responsive-table">
+                    <thead>
+                      <tr>
+                        <th>Service type</th>
+                        <th>Package type</th>
+                        <th>Delivery days</th>
+                        <th>Price</th>
+                        <th>Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let g of i.shipment">
+                        <td>{{g.service_type}}</td>
+                        <td>{{getPackageName(g.package_type)}}</td>
+                        <td>{{g.carrier_delivery_days === null ? 'up to 30 days' : g.carrier_delivery_days}}</td>
+                        <td class="bold">{{g.shipping_amount.amount}} $</td>
+                        <td>SHIP NOW</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- <div class="row">
+          <div class="col s12 center">
+            <a (click)="openLoginModal(i.carrier_id)" class="waves-effect waves-light btn shippbtn">SHIP BY {{i.carrier_name}}!</a>
+          </div>
+        </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>

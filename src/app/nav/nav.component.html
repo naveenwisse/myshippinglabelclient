@@ -1,0 +1,80 @@
+<nav *ngIf="!login">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">MyShippingLabel.com</a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li (click)="openLoginModal()">Log in / Register
+      </li>
+      <li><a href="../../assets/Terms-and-Conditions-and-Privacy-myshippinglabel.pdf" download><i class="material-icons info">info_outline</i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="!login" #nav class="active">
+  <div class="nav-wrapper">
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-font">menu</i></a>
+    <a href="#" class="brand-logo center black-font">MyShippingLabel.com</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li (click)="openLoginModal()">Log in / Register
+      </li>
+      <li><a href="../../assets/Terms-and-Conditions-and-Privacy-myshippinglabel.pdf" download><i class="material-icons info">info_outline</i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="login">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">MyShippingLabel.com</a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li routerLink="/userpanel"><i class="material-icons left">history</i>History of shipments
+      </li>
+      <li (click)="logout()"><i class="material-icons left">exit_to_app</i>Logout
+      </li>
+      <li><a href="../../assets/Terms-and-Conditions-and-Privacy-myshippinglabel.pdf" download><i class="material-icons info">info_outline</i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="login" #nav class="active">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo black-font">MyShippingLabel.com</a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-font" >menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li routerLink="/userpanel"><i class="material-icons left">history</i>History of shipments
+      </li>
+      <li (click)="logout()"><i class="material-icons left">exit_to_app</i>Logout
+      </li>
+      <li><a href="../../assets/Terms-and-Conditions-and-Privacy-myshippinglabel.pdf" download><i class="material-icons info">info_outline</i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <mz-sidenav [closeOnClick]="'true'" [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+  <mz-sidenav-header>
+  </mz-sidenav-header>
+  <mz-sidenav-link>
+
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+</mz-sidenav> -->
+
+<ul id="slide-out" class="sidenav">
+  <li *ngIf="!login"><a (click)="openLoginModal()"><i class="material-icons info">account_circle</i>Log in / Register
+  </a></li>
+  <li *ngIf="login"><a routerLink="/userpanel"><i class="material-icons left ">history</i>History of shipments
+  </a></li>
+  <li *ngIf="login"><a (click)="logout()"><i class="material-icons left">exit_to_app</i>Logout
+  </a></li>
+  <li><a href="../../assets/Terms-and-Conditions-and-Privacy-myshippinglabel.pdf" download><i class="material-icons info">info_outline</i>
+    </a>
+  </li>
+</ul>

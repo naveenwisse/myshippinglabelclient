@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  position: relative;
+  // padding-top: 30px;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.514);
+  border-radius: 15px;
+  padding: 20px 0;
+  position: relative;
+  margin-left: 0 !important;
+}
+
+.row {
+  &:nth-child(1) .box {
+    margin-top: 120px;
+  }
+}
+
+.title-pay {
+  margin-bottom: 30px;
+}
+
+.stripebtn {
+  margin-top: 30px;
+}
+
+.title-pay span {
+  font-weight: bold;
+}
+
+.width-fix {
+  width: 60% !important;
+}
+
+.margin-zer {
+  margin: 0 !important;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.margin-top-btn {
+  margin: 30px 0 !important;
+}
+
+
+.imgcarrier {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.margin {
+  margin-bottom: 50px;
+}
+
+.imgcarrier img {
+  height: auto;
+  width: 100px;
+  opacity: 1;
+  position: relative;
+  left: 0;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.font-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carrier {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+}
+
+.tablefix td,
+th {
+  @media (max-width: 500px) {
+    padding: 15px 0;
+  }
+}
+
+.margin-top {
+  margin-top: 0px;
+
+  @media (max-width: 1200px) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+}
+
+.intable {
+  width: 50px !important;
+  border: 1px solid rgb(211, 211, 211) !important;
+  border-radius: 10px !important;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.checkbox {
+  width: 100px !important;
+}
+
+.checkbox {
+  margin: 15px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  /* border: 1px solid grey; */
+  border-radius: 15px;
+}
+
+.activeCard {
+  @media (max-width: 590px) {
+    padding: 11px !important;
+  }
+}
+
+.show {
+  padding: 0 !important;
+  // display: none;
+  transition: 1s;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 40px !important;
+}
+
+.right {
+  cursor: pointer;
+}
+
+.boxpay {
+  border-radius: 15px;
+  border: 1px solid #61616173;
+  padding: 30px 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mbt {
+  margin-top: 30px;
+}
+
+.go-back {
+  position: fixed;
+  bottom: 0;
+  right: 70px;
+  height: 60px;
+  width: 110px;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 12px;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 16px;
+  box-shadow: 0 3px 4px black;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 9999;
+
+  @media(max-width:500px) {
+    right: 18px;
+  }
+}
+
+.go-back:hover {
+  height: 70px;
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  box-sizing: border-box;
+
+  height: 40px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #0a689f70;
+  border-radius: 4px;
+  background-color: white;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
